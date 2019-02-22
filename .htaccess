@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /
+    RewriteCond %{HTTP_HOST} ^www.itmarket.md
+    RewriteRule (.*) https://itmarket.md/$1 [R=301,L]
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3-9}\ /index\.html\ HTTP/
+    RewriteRule ^index\.html$ https://itmarket.md/ [R=301,L]
+</IfModule>
+ServerSignature Off
+AddDefaultCharset UTF-8	
